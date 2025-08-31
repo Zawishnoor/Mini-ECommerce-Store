@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Wishes</h1>
+                </div>
+                
+                    <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    </button>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="icon-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn" id="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+         <div class="login-section">
+                <button class="login-btn" id="login-btn"> <i class="fas fa-sign-in-alt"></i>Login / Register</button>
+            </div>
+        <section id="home" class="page active">
+
+            <section class="hero-parallax">
+                <div class="hero-content">
+                    <h1>Discover, Shop, and Shine—All in One Place</h1>
+                    <p>Shop with confidence—style meets simplicity</p>
+                    <button class="cta-btn" onclick="window.location.href='userlogin.php'">Shop Now</button>
+                </div>
+            </section>
+
+
+
+            
+
+            <section class="category-carousel">
+                <h2 class="carousel-title">Explore Categories</h2>
+                
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn left-btn" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-track" id="carousel-track">
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg" alt="Clothing">
+                        <div class="category-label">Clothing</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Electronics">
+                        <div class="category-label">Electronics</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/234220/pexels-photo-234220.jpeg" alt="Beauty">
+                        <div class="category-label">Beauty</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/415078/pexels-photo-415078.jpeg" alt="Books">
+                        <div class="category-label">Books</div>
+                    </div>
+                    
+                     <div class="category-card">
+                        <img src="https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg" alt="Clothing">
+                        <div class="category-label">Living</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/318236/pexels-photo-318236.jpeg" alt="Electronics">
+                        <div class="category-label">Footwear</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/4753996/pexels-photo-4753996.jpeg" alt="Beauty">
+                        <div class="category-label">Sports & Fitness</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/7368191/pexels-photo-7368191.jpeg" alt="Books">
+                        <div class="category-label">Travel Essentials</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/4488076/pexels-photo-4488076.jpeg" alt="Clothing">
+                        <div class="category-label">Toys & Games</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Electronics">
+                        <div class="category-label">Food</div>
+                    </div>
+                    
+                    </div>
+                
+                    <button class="carousel-btn right-btn" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+            </section>
+
+
+
+            <section class="services">
+                <div class="container">
+                    <h2 class="services-title">Why Shop With Us?</h2>
+                    <p class="services-subtitle">Discover what sets us apart.</p>
+                    
+                    <div class="services-grid">
+                    <div class="service-card animate fade-in">
+                        <div class="icon-wrap">
+                        <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Quick & Complimentary Delivery</h3>
+                        <p>Enjoy fast, reliable delivery on all orders over Rs 2000.</p>
+                    </div>
+
+                    <div class="service-card featured animate fade-in delay-1">
+                        <div class="icon-wrap">
+                        <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Top-Notch Quality</h3>
+                        <p>Only 100% genuine, premium-grade, and handpicked products.</p>
+                    </div>
+
+                    <div class="service-card animate fade-in delay-2">
+                        <div class="icon-wrap">
+                        <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Friendly and prompt support anytime you need help or guidance.</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+
+        <section id="cart" class="page">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <h1>Your Shopping Cart</h1>
+                        <p>Review your items before checkout</p>
+                    </div>
+                    
+                    <div class="cart-content">
+                        <div class="cart-table-header">
+                            <div class="col-product">Product</div>
+                            <div class="col-price">Price</div>
+                            <div class="col-quantity">Quantity</div>
+                            <div class="col-total">Total</div>
+                        </div>
+                        
+                        <div id="cart-items">
+                        </div>
+                        
+                        <div class="cart-footer">
+                            <button class="continue-shopping" onclick="showPage('shop')">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </button>
+                            
+                            <div class="cart-summary">
+                                <h3>Cart Summary</h3>
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span id="cart-subtotal">Rs 0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span class="free">Calculated at checkout</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total</span>
+                                    <span id="cart-total">Rs 0.00</span>
+                                </div>
+                                <button class="checkout-btn" onclick="showPage('checkout')">Proceed to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout" class="page">
+            <div class="container">
+                <div class="checkout-grid">
+                    <div class="checkout-form">
+                        <h1>Checkout</h1>
+                        <p>Enter your details below to complete purchase</p>
+                        
+                        <form id="checkout-form">
+                            <div class="form-section">
+                                <h2>Shipping Information</h2>
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                                <input type="text" name="address" placeholder="Address" required>
+                                <div class="form-row">
+                                    <input type="text" name="city" placeholder="City" required>
+                                    <input type="text" name="state" placeholder="State" required>
+                                    <input type="text" name="zipCode" placeholder="Zip code" required>
+                                </div>
+                                <button type="button" class="confirm-btn">Confirm</button>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h2>Payment Information</h2>
+                                <label>Cardholder name</label>
+                                <input type="text" name="cardholderName" required>
+                                <label>Card number</label>
+                                <input type="text" name="cardNumber" required>
+                                <div class="form-row">
+                                    <div>
+                                        <label>Expiration date</label>
+                                        <input type="text" name="expirationDate" placeholder="MM/YY" required>
+                                    </div>
+                                    <div>
+                                        <label>CVV</label>
+                                        <input type="text" name="cvv" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="order-btn">Order Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div id="checkout-items">
+                        </div>
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="checkout-subtotal">Rs 0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping</span>
+                                <span class="free">Free</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Total</span>
+                                <span id="checkout-total">Rs 0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section  id="categories" class="page">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Login to Shop by Category</h2>
+                        <p>Discover amazing deals across all categories</p>
+                    </div>
+                    <div class="search-bar-container">
+                        <input type="text" id="categorySearch" placeholder="Search categories or subcategories...">
+                    </div>
+                    <div class="categories-grid" id="categories-grid">
+                        <div class="category-item" data-category="Clothing"> 
+                            <i class="fas fa-tshirt"></i>
+                            <span>Clothing</span>
+                        </div>
+                        <div class="category-item" data-category="Electronics">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Electronics</span>
+                        </div>
+                        <div class="category-item" data-category="Beauty">
+                            <i class="fas fa-gem"></i>
+                            <span>Beauty</span>
+                        </div>
+                        <div class="category-item" data-category="Books">
+                            <i class="fas fa-book"></i>
+                            <span>Books</span>
+                        </div>
+                        <div class="category-item" data-category="Living">
+                            <i class="fas fa-home"></i>
+                            <span>Living</span>
+                        </div>
+                        <div class="category-item" data-category="Footwear">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>Footwear</span>
+                        </div>
+                        <div class="category-item" data-category="Sports & Fitness">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Sports & Fitness</span>
+                        </div>
+                        <div class="category-item" data-category="Travel Essentials">
+                            <i class="fas fa-suitcase"></i>
+                            <span>Travel Essentials</span>
+                        </div>
+                        <div class="category-item" data-category="Toys & Games">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Toys & Games</span>
+                        </div>
+                        <div class="category-item" data-category="Food">
+                            <i class="fas fa-coffee"></i>
+                            <span>Food</span>
+                        </div>
+                    </div>
+                    <div id="subcategories-section" class="subcategories-section" style="display:none;">
+                        <button id="back-to-main-categories" style="margin-bottom: 1rem;">&larr; Back to Categories</button>
+                        <h3 id="subcategories-title"></h3>
+                        <div id="subcategories-list" class="subcategories-grid"></div>
+                    </div>
+                    <div id="category-products-section" class="category-products-section" style="display:none;">
+                        <button id="back-to-subcategories" style="margin-bottom: 1rem;">&larr; Back to Subcategories</button>
+                        <h3 id="category-products-title"></h3>
+                        <div id="category-products-list" class="products-grid"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        <section id="about" class="page">
+            <div class="container">
+                <div class="about-hero">
+                    <h1>About Wishes</h1>
+                    <p>Everyday Luxury, Thoughtfully Curated</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="story-section">
+                        <div class="story-image">
+                            <img src="https://images.pexels.com/photos/33679165/pexels-photo-33679165.jpeg" alt="Modern retail interior">
+                        </div>
+                        <div class="story-text">
+                            <h2>Our Story</h2>
+                            <p>Wishes began with a simple goal: to make shopping effortless and inspiring by offering beautifully crafted essentials that elevate your daily life.</p>
+                            <p>We began with a clear mission: to make online shopping simple, enjoyable, and trustworthy for all. More than just a store, we are a community built on transparency, customer care, and speedy delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="values-section">
+                    <h2> Our Purpose & Principles</h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Trust</h3>
+                            <p>Built on trust and openness</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Elegance</h3>
+                            <p>Subtle style, lasting impression</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Customer-Centric</h3>
+                            <p>Tailored to your needs</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Simplicity</h3>
+                            <p>Quality over quantity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-section">
+                    <h2> Customers Response</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-header">
+                                <div class="avatar">S</div>
+                                <h4>Ali Khan</h4>
+                            </div>
+                            <p>" love how Wishes combines quality with elegance. Every purchase has been a delight!"</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-header">
+                                <div class="avatar">M</div>
+                                <h4>Zunaira Malik</h4>
+                            </div>
+                            <p>"Wishes  products have added so much value to my life. I am so glad I discovered this brand!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container">
+                <div class="contact-hero">
+                    <h1>Get in Touch</h1>
+                    <p>Have questions or feedback?</p>
+                    <p>we'd love to hear from you</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p>support@wishes.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Phone</h4>
+                            <p>+92 0005828631</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Location</h4>
+                            <p>Haripur, Pakistan</p>
+                        </div>
+                        <div class="social-links">
+                            <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                            <div class="social-icon"><i class="fab fa-facebook"></i></div>
+                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                What is your return policy?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How long does shipping take?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                What payment method do you accept?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How can I track my order?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How do I get started?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     
+        <section id="wishlist" class="page">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <h1>Your Wishlist</h1>
+                        <p>Everything you love, gathered for you.</p>
+                    </div>
+                    <div class="cart-content">
+                        <div class="cart-table-header">
+                            <div class="col-product">Product</div>
+                            <div class="col-price">Price</div>
+                            <div class="col-action">Action</div>
+                        </div>
+                        <div id="wishlist-items">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        
+    
+            <section class="newsletter">
+                <div class="newsletter-wrapper">
+                    <h2 class="newsletter-title">Get the Latest</h2>
+                    <p class="newsletter-desc">Sign up for handpicked trends, exclusive savings, and updates you wont want to miss.</p>
+                    
+                    
+
+                    <form class="newsletter-form" onsubmit="showSuccessMessage(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Join Now</button>
+                    </form>
+
+                
+                    
+                    <p id="success-message" class="success-message">Thanks for subscribing! 🎉</p>
+
+                </div>
+            </section>
+
+
+
+   
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Wishes</h3>
+        <p>Discover timeless and modern essentials, curated for your wardrobe and home.</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow us on</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <div class="footer-link-columns">
+          <ul>
+            <li><a href="#">Privacy & Cookies</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Manufactures</a></li>
+            <li><a href="#">Best Seller</a></li>
+          </ul>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+  <p>&copy; 2025 <strong>Wishes</strong>. All rights reserved.</p>
+</div>
+
+  </div>
+</footer>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2>Wishes</h2>
+                <p id="modal-subtitle">Great to have you back!</p>
+            </div>
+            
+            <div id="login-type-selection">
+                <h3 style="text-align:center; margin-bottom:1rem;">Login as</h3>
+                <div style="display:flex; justify-content:center; gap:1.5rem;">
+                    <button class="auth-type-btn" id="user-login-btn" type="button" onclick="window.location.href='userlogin.php'">User</button>
+                    <button class="auth-type-btn" id="admin-login-btn" type="button" onclick="window.location.href='admin_login.php'">Admin</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      640: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 5,
+      }
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
